@@ -1,2 +1,10 @@
+#!/usr/bin/bash
+
 sudo bash ./ros-install.sh
-sudo bash ./catkin-install.sh
+
+REBUILD_PX4=${1:-keep}
+if [ $REBUILD_PX4 = rebuild ]
+then
+   sudo bash ./catkin-install.sh
+   sudo bash ./px4-sitl-install.sh
+fi
