@@ -1,14 +1,10 @@
 #!/usr/bin/bash
-
+BASE_DIR='/'
 sudo bash ./ros-install.sh
 
 REBUILD_PX4=${1:-keep}
 if [ $REBUILD_PX4 = rebuild ]
 then
-   sudo bash ./catkin-install.sh
-   sudo bash ./px4-sitl-install.sh
+   sudo bash ./catkin-install.sh $BASE_DIR
+   sudo bash ./px4-sitl-install.sh $BASE_DIR
 fi
-
-sudo apt-get install python-jinja2 -y
-sudo pip install numpy toml
-
