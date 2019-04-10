@@ -22,15 +22,15 @@ sudo apt update
 case $MODE in
     full-dsk)
         echo 'FULL'
-        sudo apt install ros-melodic-desktop-full
+        sudo apt install ros-melodic-desktop-full -y
         ;;
     dsk)
         echo 'DSK'
-        sudo apt install ros-melodic-desktop
+        sudo apt install ros-melodic-desktop -y
         ;;
     base)
         echo 'BASE'
-        sudo apt install ros-melodic-desktop-base
+        sudo apt install ros-melodic-desktop-base -y
         ;;
 esac
 
@@ -41,6 +41,10 @@ rosdep update
 # add to bash
 echo "source /opt/ros/melodic/setup.bash" >> ~/.bashrc
 source ~/.bashrc
+
+#install mavros
+sudo apt-get install -y ros-melodic-mavros ros-melodic-mavros-extras
+sudo apt-get install -y ros-kinetic-mavros ros-kinetic-mavros-extras
 
 # install build tools for ros
 sudo apt install -y python-rosinstall python-rosinstall-generator python-wstool build-essential
