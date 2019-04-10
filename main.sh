@@ -8,3 +8,7 @@ then
    sudo bash ./catkin-install.sh
    sudo bash ./px4-sitl-install.sh
 fi
+
+sudo apt-get install python-jinja2 -y
+sudo pip install numpy toml
+
