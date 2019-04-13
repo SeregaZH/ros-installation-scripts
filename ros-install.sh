@@ -44,8 +44,7 @@ source ~/.bashrc
 
 #install mavros
 sudo apt-get install -y ros-melodic-mavros ros-melodic-mavros-extras
-wget https://raw.githubusercontent.com/mavlink/mavros/master/mavros/scripts/install_geographiclib_datasets.sh
-sudo bash ./install_geographiclib_datasets.sh
+wget -q -O - https://raw.githubusercontent.com/mavlink/mavros/master/mavros/scripts/install_geographiclib_datasets.sh | sudo bash -
 
 # install build tools for ros
 sudo apt install -y python-rosinstall python-rosinstall-generator python-wstool build-essential
