@@ -12,7 +12,7 @@ FULL_PATH="$CATKIN_PATH$SRC_PATH"
 if [ -d $FULL_PATH ]
 then
     echo "The directory $FULL_PATH exists remove the directory"
-    sudo rm -r $FULL_PATH    
+    sudo rm -r $FULL_PATH
 fi
 
 sudo mkdir -p $FULL_PATH

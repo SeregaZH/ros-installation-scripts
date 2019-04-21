@@ -1,0 +1,12 @@
+version: "3.7"
+services:
+  ros-bridge:
+    build:
+      context: .
+      cache_from:
+        - ros:melodic-ros-base
+      args:
+        buildno: 1
+    ports:
+      - "9090:9090"
+      - "11311:11311"
