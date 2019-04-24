@@ -1,0 +1,34 @@
+version: "3.7"
+services:
+  master:
+    container_name: master
+    build:
+      context: ./ros-core
+      cache_from:
+        - ros:melodic-ros-base
+    ports:
+      - "11311:11311"
+    command:
+      - roscore
+  rosbridge:
+    container_name: rosbridge
+    build:
+      context: ./ros-core
+    ports:
+      - "9090:9090"
+    command: ["roslaunch", "rosbridge_server", "rosbridge_websocket.launch"]
+    environment:
+      - "ROS_HOSTNAME=rosbridge"
+      - "ROS_MASTER_URI=http://master:11311"
+    depends_on:
+      - "master"
+  listener:
+    build:
+      context: ./ros-core
+    container_name: listener
+    environment:
+      - "ROS_HOSTNAME=listener"
+      - "ROS_MASTER_URI=http://master:11311"
+    command: rosrun roscpp_tutorials listener
+    depends_on:
+      - "master"
