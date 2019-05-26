@@ -1,2 +1,4 @@
 catkin_ws/
 install_geographiclib_datasets.*
+.idea/
+.vscode/

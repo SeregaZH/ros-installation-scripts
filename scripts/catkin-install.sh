@@ -9,23 +9,30 @@ function echo_yel() {
 }
 
 # script parameters
-CATKIN_PATH=${1:-'catkin_ws/'}
-SRC_PATH=${2:-'src/'}
+ACTION=${1:-empty} #possible values : empty (default) or init
+CATKIN_PATH=${2:-'catkin_ws'}
+SRC_PATH=${3:-'src'}
 
-echo_yel $CATKIN_PATH
-echo_yel $SRC_PATH
+echo_yel ${CATKIN_PATH}
+echo_yel ${SRC_PATH}
 
 # create catkin workplace
-FULL_PATH="$CATKIN_PATH$SRC_PATH"
-if [ -d $FULL_PATH ]
+FULL_PATH="$CATKIN_PATH/$SRC_PATH"
+if [[ -d ${FULL_PATH} ]]
 then
     echo_yel "The directory $FULL_PATH exists remove the directory"
-    sudo rm -rf $FULL_PATH
+    sudo rm -rf ${FULL_PATH}
 fi
 
-sudo mkdir -p $FULL_PATH
+sudo mkdir -p ${FULL_PATH}
 
 CURDIR=$PWD
-cd $CATKIN_PATH
-/bin/bash catkin_init
-cd $CURDIR
+cd ${CATKIN_PATH}
+
+#init workplace if required else use empty workplace
+if [[ ${ACTION} = init ]]
+then
+    sudo /bin/bash -c "source /opt/ros/melodic/setup.bash; catkin_init_workspace"
+fi
+
+cd ${CURDIR}

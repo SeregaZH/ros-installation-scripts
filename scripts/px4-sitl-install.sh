@@ -16,7 +16,7 @@ FIRMWARE_PATH='Firmware'
 CURDIR=$PWD
 echo_yel "Current directory is $CURDIR, Navigate to $FIRMWARE_BASE_PATH"
 cd "$FIRMWARE_BASE_PATH"
-if [ -d "$FIRMWARE_PATH" ]
+if [[ -d "$FIRMWARE_PATH" ]]
 then
     echo_yel "PX4 firmware repository already exists by path $FIRMWARE_PATH. Remove it"
     sudo rm -rf "$FIRMWARE_PATH"
@@ -24,9 +24,9 @@ fi
 
 echo_yel "Clone https://github.com/PX4/Firmware.git repository"
 sudo git clone https://github.com/PX4/Firmware.git
-cd $FIRMWARE_PATH
+cd ${FIRMWARE_PATH}
 git submodule update --init --recursive
-cd $CURDIR
+cd ${CURDIR}
 
 echo_yel "Install firmware dependencies"
 sudo -H apt install python-pip -y
