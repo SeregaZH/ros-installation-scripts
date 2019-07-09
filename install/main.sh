@@ -23,6 +23,8 @@ then
    sudo bash ${DIR}/px4-sitl-install.sh ${BASE_DIR}
    sudo bash ${DIR}/catkin-install.sh empty ${TRTL_FULL_PATH}
    sudo bash ${DIR}/turtlebot-install.sh ${TRTL_FULL_PATH}
+   sudo bash ${DIR}/ardupilot-install.sh ${BASE_DIR}
+   sudo bash ${DIR}/aion-robotics-install.sh ${BASE_DIR}
 fi
 
 sudo bash ${DIR}/ros-bridge-install.sh
