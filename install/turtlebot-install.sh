@@ -1,26 +1,27 @@
 # script parameters
-CATKIN_TURTLE_PATH=${1:-'catkin_ws'}
+ROS_DISRTO=${1:-'melodic'}
+CATKIN_TURTLE_PATH=${2:-'catkin_ws'}
 
 sudo apt-get install -y ros-melodic-joy \
-      ros-melodic-teleop-twist-joy \
-      ros-melodic-teleop-twist-keyboard \
-      ros-melodic-laser-proc \
-      ros-melodic-rgbd-launch \
-      ros-melodic-depthimage-to-laserscan \
-      ros-melodic-rosserial-arduino \
-      ros-melodic-rosserial-python \
-      ros-melodic-rosserial-server \
-      ros-melodic-rosserial-client \
-      ros-melodic-rosserial-msgs \
-      ros-melodic-amcl \
-      ros-melodic-map-server \
-      ros-melodic-move-base \
-      ros-melodic-urdf \
-      ros-melodic-xacro \
-      ros-melodic-compressed-image-transport \
-      ros-melodic-rqt-image-view \
-      ros-melodic-navigation \
-      ros-melodic-interactive-markers
+      ros-${ROS_DISRTO}-teleop-twist-joy \
+      ros-${ROS_DISRTO}-teleop-twist-keyboard \
+      ros-${ROS_DISRTO}-laser-proc \
+      ros-${ROS_DISRTO}-rgbd-launch \
+      ros-${ROS_DISRTO}-depthimage-to-laserscan \
+      ros-${ROS_DISRTO}-rosserial-arduino \
+      ros-${ROS_DISRTO}-rosserial-python \
+      ros-${ROS_DISRTO}-rosserial-server \
+      ros-${ROS_DISRTO}-rosserial-client \
+      ros-${ROS_DISRTO}-rosserial-msgs \
+      ros-${ROS_DISRTO}-amcl \
+      ros-${ROS_DISRTO}-map-server \
+      ros-${ROS_DISRTO}-move-base \
+      ros-${ROS_DISRTO}-urdf \
+      ros-${ROS_DISRTO}-xacro \
+      ros-${ROS_DISRTO}-compressed-image-transport \
+      ros-${ROS_DISRTO}-rqt-image-view \
+      ros-${ROS_DISRTO}-navigation \
+      ros-${ROS_DISRTO}-interactive-markers
 
 CURDIR=$PWD
 
