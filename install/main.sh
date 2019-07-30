@@ -32,3 +32,4 @@ then
 fi
 
 sudo bash ${DIR}/ros-bridge-install.sh ${ROS_DISRTO}
+sudo bash ${DIR}/rosdep-install.sh ${ROS_DISRTO}
