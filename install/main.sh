@@ -9,6 +9,7 @@ ROS_DISRTO=${2:-'melodic'}
 DIR="$(dirname "$0")"
 sudo apt update
 sudo apt-get update
+sudo bash ${DIR}/base-install.sh
 sudo bash ${DIR}/ros-install.sh ${ROS_DISRTO}
 
 if [[ ${REBUILD_PX4} = rebuild ]]
