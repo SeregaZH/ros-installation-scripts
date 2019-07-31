@@ -1,6 +1,6 @@
-#!/usr/bin/bash
-# clone ardupilot plugin repository
+#!/usr/bin/env bash
 
+# clone ardupilot plugin repository
 # colored console echo in yellow
 # TODO rewrite to reuse this code
 YEL='\033[0;33m'

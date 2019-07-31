@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/usr/bin/env bash
 # clone aion robotic repository
 
 # colored console echo in yellow

@@ -1,6 +1,6 @@
-#!/usr/bin/bash
-# clone px-4 repository
+#!/usr/bin/env bash
 
+# clone px-4 repository
 # colored console echo in yellow
 # TODO rewrite to reuse this code
 YEL='\033[0;33m'

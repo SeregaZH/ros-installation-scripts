@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 # script parameters
 ROS_DISRTO=${1:-'melodic'}
 CATKIN_TURTLE_PATH=${2:-'catkin_ws'}

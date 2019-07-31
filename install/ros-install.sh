@@ -1,6 +1,6 @@
-#!/usr/bin/bash
-# install core of ROS
+#!/usr/bin/env bash
 
+# install core of ROS
 # colored console echo in yellow
 # TODO rewrite to reuse this code
 YEL='\033[0;33m'

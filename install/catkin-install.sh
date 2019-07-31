@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/usr/bin/env bash
 
 # colored console echo in yellow
 # TODO rewrite to reuse this code

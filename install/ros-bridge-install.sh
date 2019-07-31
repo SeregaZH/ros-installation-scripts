@@ -1,4 +1,5 @@
-#!/usr/bin/bash
+#!/usr/bin/env bash
+
 # install rosbridge
 
 ROS_DISRTO=${1:-'melodic'}

@@ -1,4 +1,5 @@
-#!/usr/bin/bash
+#!/usr/bin/env bash
+
 # TODO move it to parameters file
 BASE_DIR='/home/main'
 TRTL_PATH='/catkin_ws'
