@@ -5,7 +5,8 @@ ROS_DISRTO=${1:-'melodic'}
 sudo apt-get install -y ros-${ROS_DISRTO}-nodelet \
                         ros-${ROS_DISRTO}-image-transport \
                         ros-${ROS_DISRTO}-dynamic-reconfigure \
-                        ros-${ROS_DISRTO}-web-video-server
+                        ros-${ROS_DISRTO}-web-video-server \
+                        ros-${ROS_DISRTO}-teleop-twist-joy
 
 sudo apt-key adv --keyserver keys.gnupg.net --recv-key C8B3A55A6F3EFCDE \
      || sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-key C8B3A55A6F3EFCDE
