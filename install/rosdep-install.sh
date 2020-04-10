@@ -22,4 +22,5 @@ then
 fi
 
 sudo apt-get update
-sudo apt-get install -y librealsense2-dkms librealsense2-utils librealsense2-dev librealsense2-dbg
+sudo apt-get install -y librealsense2-dkms librealsense2-utils librealsense2-dev librealsense2-dbg \
+                        ros-${ROS_DISRTO}-realsense2-camera
